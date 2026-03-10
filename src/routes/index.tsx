@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -53,6 +53,9 @@ function HomePage() {
       {data && (
         <p className="text-muted-foreground">API Status: {data.status}</p>
       )}
+      <Link to="/intro">
+        <Button>Go to Intro</Button>
+      </Link>
     </div>
   );
 }
